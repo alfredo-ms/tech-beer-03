@@ -11,7 +11,7 @@ export class UserController {
     return this.userService.getUserList();
   }
 
-  @Get(':login:password')
+  @Get('/:login/:password')
   getUser(@Param('login') login: string, @Param('password') password: string): Array<User> {
     
     return this.userService.getUserList().filter((user: User) => {
